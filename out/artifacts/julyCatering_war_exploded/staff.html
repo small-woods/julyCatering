@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        .maple { position: absolute; top: 0;/* color: #547E26; */ }
+        .orderbtn{width: 300px;height: 80px;border-radius: 25px;border:none;
+            background: #e2a466;outline: none;margin-top: 30%;margin-left: 40%;position: fixed}
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script type="text/javascript" src="lib/layui/layui.all.js" charset="utf-8"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/enter.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+</head>
+<body style="background-color: white; background-image: url(images/1561365642903.jpg); background-repeat: no-repeat; background-position: center 0%;">
+<div class="maplebg">
+    <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
+        <button type="button">进入点菜</button>
+        <div class="morph-content">
+            <div>
+                <div class="content-style-form content-style-form-1">
+                    <span><img src="images/del.png" class="iconno"><i class="fa fa-close (alias)"></i></span>
+                    <h2>餐桌安排</h2>
+                    <form>
+                        <p><label>台号</label><input type="text" id="tableno" value="" name="tableno" class="tableinfo" autocomplete="off"/></p>
+                        <p><label>人数</label><input type="text" id="tablenum"  class="tableinfo" name="tablenum" autocomplete="off"/></p>
+                        <p><button class="tbtn" value="确认" id="ok" name="ok">确认</button><button class="tbtn" id="no" name="no" value="取消">取消</button></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+	<i class="fa fa-glass"></i>
+</div>
+<script>
+    var d = "<div class='maple'>🍸<div>";
+    setInterval(function () {
+        var f = $(document).width();
+        var e = Math.random() * f - 300; // 枫叶的定位left值
+        var o = 0.2 + Math.random(); // 枫叶的透明度
+        var fon = 25 + Math.random() * 10; // 枫叶大小
+        var l = e - 100 + 200 * Math.random(); // 枫叶的横向位移
+        var k = 8000 + 5000 * Math.random();
+        var deg = Math.random() * 360; // 枫叶的方向
+        $(d).clone().appendTo(".maplebg").css({
+            left: e + "px",
+            opacity: o,
+            transform: "rotate(" + deg + "deg)",
+            "font-size": fon,
+        }).animate({
+            top: "550px",
+            left: l + "px",
+            opacity: 0.1,
+        }, k, "linear", function () {
+            $(this).remove()
+        })
+    }, 500)
+</script>
+<script src="js/classie.js"></script>
+<script src="js/uiMorphingButton_fixed.js"></script>
+<script>
+    (function() {
+        var docElem = window.document.documentElement, didScroll, scrollPosition;
+
+        // trick to prevent scrolling when opening/closing button
+        function noScrollFn() {
+            window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+        }
+
+        function noScroll() {
+            window.removeEventListener( 'scroll', scrollHandler );
+            window.addEventListener( 'scroll', noScrollFn );
+        }
+
+        function scrollFn() {
+            window.addEventListener( 'scroll', scrollHandler );
+        }
+
+        function canScroll() {
+            window.removeEventListener( 'scroll', noScrollFn );
+            scrollFn();
+        }
+
+        function scrollHandler() {
+            if( !didScroll ) {
+                didScroll = true;
+                setTimeout( function() { scrollPage(); }, 60 );
+            }
+        };
+
+        function scrollPage() {
+            scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+            didScroll = false;
+        };
+
+        scrollFn();
+
+        [].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+            new UIMorphingButton( bttn, {
+                closeEl : '.iconno',
+                onBeforeOpen : function() {
+                    // don't allow to scroll
+                    noScroll();
+                },
+                onAfterOpen : function() {
+                    // can scroll again
+                    canScroll();
+                },
+                onBeforeClose : function() {
+                    // don't allow to scroll
+                    noScroll();
+                },
+                onAfterClose : function() {
+                    // can scroll again
+                    canScroll();
+                }
+            } );
+        } );
+
+        // for demo purposes only
+        [].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) {
+            bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+        } );
+    })();
+</script>
+</body>
+</html>

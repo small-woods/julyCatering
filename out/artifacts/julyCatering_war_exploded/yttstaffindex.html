@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" href="css/adminstyle.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" href="zui/css/zui.css">
+    <link rel="stylesheet" href="awfonts/css/font-awesome.css">
+
+    <script src="zui/lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="zui/js/zui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.slimscroll.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/food.js"></script>
+    <style type="text/css">
+        body{
+            font-size: 14px;
+        }
+        .container-fluid {
+            padding-left: 0 !important;
+        }
+
+        #wrap {
+            min-width: 100%;
+            position: absolute;
+            background: #eff3f6 bottom;
+            min-height: 100%;
+            overflow: hidden;
+        }
+
+        .leftMeun {
+            position: absolute;
+            box-sizing: border-box;
+            width: 200px;
+            height: 100%;
+            background: #7D6F6F bottom;
+        }
+        #logoDiv {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            height: 70px;
+            background-color: #029789;
+            font-size: 17px;
+            color: #fff;
+            vertical-align: bottom;
+        }
+
+        #logo {
+            height: 30px;
+            padding-right: 5px;
+        }
+
+        #logoDiv span {
+            vertical-align: bottom;
+        }
+
+        #personInfor {
+            padding-bottom: 5px;
+            /* margin: 0 5px; */
+            color: #B5BABC;
+            border-bottom: 1px solid #029789;
+            overflow-x: hidden;
+            /* padding-left: 20px; */
+        }
+
+        #personInfor p {
+            font-size: 12px;
+            margin-left: -5px;
+        }
+
+        #personInfor a {
+            color: #B3BCC5;
+            text-decoration: underline;
+        }
+
+        .personTable {
+            color: #B3BCC5;
+        }
+
+        #userName {
+            font-size: 15px !important;
+            padding: 0;
+            margin: 0;
+        }
+
+        .line-div {
+            color: #F00;
+            height: 5px;
+        }
+
+        .meun dl {
+            padding: 0 10px;
+        }
+
+        .meun-title {
+            color: #B5BABC;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .meun-item {
+            line-height: 40px;
+            height: 40px;
+            color: #aab1b7;
+            cursor: pointer;
+        }
+
+        .meun-item:hover {
+            opacity: 0.5;
+            /* border: #F0F0EE 1px solid; */
+        }
+
+        .meun-item a {
+            color: #aab1b7;
+            display: block;
+        }
+
+        .meun-item-active a {
+            color: #c4c7cc;
+            display: block;
+        }
+
+        .meun-item img {
+            padding-right: 8px;
+            height: 20px;
+        }
+
+        .meun-item-active {
+            background-color: #029789;
+            border-right: 4px solid #029789;
+            color: #fff;
+        }
+        button, input, select, textarea{
+            margin-left: 5px;
+        }
+        .bg-primary{
+            background-color:  #029789;
+        }
+        .btn{
+            width: 100%;
+            border-radius: 0px;
+            font-size: 15px;
+        }
+        .btn:focus{
+            background-color: #029789;
+            border-right: 4px solid #029789;
+            color: #fff;
+        }
+        .btn-link:hover, .btn-link:focus{
+            color:#F1F1F1;
+        }
+        p{
+            width: 100%;
+            margin: 0px;
+            line-height: 40px;
+            font-size: 16px;
+            text-align: center;
+        }
+        a{
+            color: white;
+        }
+        a:hover{
+            color:#7D6F6F ;
+            text-decoration: none;
+        }
+        a:active{
+            color:#7D6F6F ;
+            text-decoration: none;
+        }
+        a:after{
+            color:#7D6F6F ;
+            text-decoration: none;
+        }
+        .bg-red, .bg-danger,.bg-green, .bg-success{
+            background-color:#029789 ;
+        }
+    </style>
+</head>
+<body>
+<section id="container">
+    <div class="leftMeun" id="leftMeun">
+        <div id="logoDiv">
+            <p id="logoP"><img id="logo" alt="diancanxitong" src="images/logo.png"><span>点餐系统</span></p>
+        </div>
+        <div id="personInfor">
+            <img src="images/user.png" alt="" class="userimg" />服务工号：<input type="text" id="userNo" class="userNo usercom"
+                                                                            value="007" name="userNo" readonly="true"/>
+            </p>
+        </div>
+        <div class="personTable">
+            台号：<input type="text" id="userTable" class="usercom" value="007" name="userNo" readonly="true"/><br />
+            人数：<input type="text" id="users" class="usercom" value="007" name="userNo" readonly="true"/><br />
+            订单号：<input type="text" id="userNum" class="usercom" value="007" name="userNo" readonly="true"/><br /><br />
+        </div>
+        <div class="meun-title">订单管理</div>
+        <div id="accordion">
+
+            <p>
+                <a href="cyDishes.html" target="fowardiframe" class="btn btn-link meun-item"><i class="fa fa-address-book"></i>开始点餐</a>
+            </p>
+
+            <p>
+                <a href="#collapseExample2" data-toggle="collapse" data-parent="#accordion" class="btn btn-link collapsed meun-item"><i class="fa fa-map"></i>订单详情</a>
+            </p>
+            <div class="collapse" id="collapseExample2">
+                <div class="bg-success with-padding">
+                    <a href="cyincompleteOrders.html" target="fowardiframe"><p>未完成订单</p></a>
+                    <a href="cymyCar.html" target="fowardiframe"><p>当前订单</p></a>
+                </div>
+            </div>
+
+            <p>
+                <a href="cyTable.html" target="fowardiframe" class="btn btn-link meun-item"><i class="fa fa-calculator"></i>餐桌详情</a>
+            </p>
+
+            <p>
+                <a href="#collapseExample3" data-toggle="collapse" data-parent="#accordion" class="btn btn-link collapsed meun-item"><i class="fa fa-bell"></i>更多服务</a>
+            </p>
+            <div class="collapse" id="collapseExample3">
+                <div class="bg-danger with-padding">
+                    <a href="staff.html" ><p>退出</p></a>
+                    <a href="staffLogin.html" ><p>我要换班</p></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="all-container2">
+        <iframe src="cypicShow.html" frameborder="0" id="contentIframe" name="fowardiframe"></iframe>
+    </div>
+</section>
+</body>
+</html>

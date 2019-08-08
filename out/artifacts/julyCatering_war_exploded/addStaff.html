@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <title>导入员工</title>
+
+
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/xadmin.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/addStaff.js" charset="utf-8"></script>
+
+    <style>
+        .layui-form-label{width: 200px}
+        .layui-btn{margin-left: 20px;margin-right: 110px;
+            background: #029789;}
+        .buttunContent{margin-left: 100px}
+        .file{background: #029789;color: white;position: relative;top: 5px;border-radius: 3px}
+        #fileInfo{display: none;visibility: hidden}
+        .layui-form{width: 550px;position: absolute;left: 50%;margin-left: -275px}
+        .hidden{display: none;visibility:hidden}
+    </style>
+</head>
+
+<body>
+<div class="x-body">
+    <form class="layui-form dataForm" action="uploadFile" enctype="multipart/form-data" method="post" target="moreiframe">
+        <label for="file" class="layui-form-label">
+            <span class="x-red">*</span>请选择一个Excel文件
+        </label>
+        <input  id="fileInfo" type="text" name="fileInfo"/>
+        <input  id="file" type="file" name="file" class="file">
+        <hr>
+        <div class="layui-form-item buttunContent">
+
+            <button type="submit" class="layui-btn"  lay-submit="" onclick="return check(this);">
+                确认导入
+            </button>
+
+            <button  class="layui-btn"  lay-submit="" onclick="return cancel(this);">
+                重置选择
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+
+</html>

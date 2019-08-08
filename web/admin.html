@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+    <link rel="stylesheet" type="text/css" href="css/adminstyle.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.slimscroll.js"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="js/yttadd.js"></script>
+</head>
+<body>
+<section id="container">
+    <header class="header fixed-top">
+        <div class="brand">
+            <a href="index.html" class="logo">
+                欢迎！管理员
+            </a>
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars"></div>
+            </div>
+        </div>
+        <div class="top-nav">
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <input type="text" class="form-control search" placeholder=" Search">
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <img alt="" src="images/2.png">
+                        <span class="username">John Doe</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <li><a href="adminLogin.html"><i class="fa fa-cog"></i>退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li>
+                        <a href="addFood.html" target="moreiframe">
+                            <i class="fa fa-user"></i>
+                            <span>数据管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cyadminTable.html" target="moreiframe">
+                            <i class="fa fa-user"></i>
+                            <span>查看餐桌</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="outFoodDetail.html" target="moreiframe">
+                            <i class="fa fa-user"></i>
+                            <span>查看菜肴</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-envelope"></i>
+                            <span>交易管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="orderinfo.html" target="moreiframe">订单详情</a></li>
+                            <li><a href="cycharts.html" target="moreiframe">统计报表</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class=" fa fa-bar-chart-o"></i>
+                            <span>员工管理</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="addStaff.html" target="moreiframe">员工导入</a></li>
+                            <li><a href="batchStaffDetail.html" target="moreiframe">信息维护</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="cychangepwd.html" target="moreiframe">
+                            <i class="fa fa-user"></i>
+                            <span>修改密码</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <div class="all-container">
+        <iframe src="welcomeAdmin.html" frameborder="0" id="contentIframe" name="moreiframe"></iframe>
+    </div>
+</section>
+</body>
+</html>

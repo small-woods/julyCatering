@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/xadmin.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/xadmin.js" charset="utf-8"></script>
+
+    <style>
+        .content{width: 400px;height: 300px;position: absolute;left: 50%;margin-left: -200px;margin-top: 50px}
+        .msg{font-style: italic;font-size: 30px;color: red}
+        .msgMini{font-style: italic;font-size: 15px;color: black}
+        .red{color: red}
+        .layui-btn{
+            background: #f0bcb4;}
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="msg">员工导入失败！</div>
+
+    <hr>
+    <button class="layui-btn contiue">返回发布</button>
+    <button class="layui-btn exit">退出系统</button>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $(".contiue").click(function () {
+            window.history.go(-1);
+        });
+        $(".exit").click(function () {
+            window.parent.location.href="../adminLogin.html";
+        });
+
+    });
+</script>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/xadmin.css">
+    <link rel="stylesheet" href="css/updateindex.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/yttadd.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+
+<body>
+<div class="box">
+    <ul class="nav">
+        <li class="current">发布菜肴</li>
+        <li>发布菜品</li>
+        <li>发布餐桌</li>
+    </ul>
+
+    <ul class="content">
+        <li class="detaileinfo">
+
+            <div class="x-nav">
+            </div>
+
+            <div class="x-body">
+<!--/*enctype="multipart/form-data"*/-->
+                <form class="layui-form layui-col-md12  x-so dataForm" id="data1" action="UploadImg" method="post" enctype="multipart/form-data">
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>当前选择的修改内容：
+                        </label>
+                        <!--<input type="text" name="hrid" value="" id="id">-->
+
+
+                        <input disabled="disabled" value="发布菜肴" class="layui-input noBorder x-red" type="text">
+
+                        <!--<input value="发布菜肴" class="layui-input hidden" type="text" name="dimension" >-->
+                    </div>
+                    <hr>
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>菜肴图片
+                        </label>
+                        <input class="" type="file" name="foodImg" id="foodImg" autocomplete="off">
+                    </div>
+                    <hr>
+
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>菜肴名称
+                        </label>
+                        <input class="" type="text" name="foodName" id="foodName" placeholder="请输入菜肴名称" autocomplete="off">
+                    </div>
+                    <hr>
+
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>菜肴类型
+                        </label>
+                        <input class="" type="text" name="foodType" id="foodType" placeholder="菜肴类型" autocomplete="off">
+                    </div>
+                    <hr>
+
+
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>菜肴价格
+                        </label>
+                        <input class="" type="number" name="foodPrice" id="foodPrice" placeholder="请选择菜肴价格" autocomplete="off">
+                    </div>
+                    <hr>
+
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>菜肴信息
+                        </label>
+                        <textarea class="foodinfo" name="foodInfo" id="foodInfo" cols="50" rows="50" placeholder="请输入菜肴信息" autocomplete="off"></textarea>
+
+                    </div>
+                    <hr>
+
+                    <input type="submit" class="layui-btn submit" value="发布完成"/>
+                </form>
+
+            </div>
+        </li>
+        <li>
+            <div class="x-nav">
+            </div>
+
+            <div class="x-body">
+
+                <form class="layui-form layui-col-md12  x-so dataForm" id="data2" action="Uploadfoodtype" method="post">
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>当前选择的修改内容：
+                        </label>
+                        <input type="text" name="hrid" value="" id="id2">
+
+
+                        <input disabled="disabled" value="菜品种类" class="layui-input noBorder x-red" type="text">
+
+                    </div>
+                    <hr>
+
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>菜品名称
+                        </label>
+                        <input class="" type="text" name="typeFood" id="typeFood" placeholder="热菜" autocomplete="off">
+                    </div>
+                    <hr>
+                    <input type="submit" class="layui-btn submit" value="提交菜品"/>
+
+                </form>
+
+            </div>
+        </li>
+        <li>
+            <div class="x-nav">
+            </div>
+
+            <div class="x-body">
+
+                <form class="layui-form layui-col-md12  x-so dataForm" id="data3" action="uploadTab" method="post" >
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>当前选择的修改内容：
+                        </label>
+                        <input type="text" name="hrid" value="" id="id3">
+                        <input disabled="disabled" value="餐桌型号" class="layui-input noBorder x-red" type="text">
+                    </div>
+                    <hr>
+
+                    <div class="layui-row">
+                        <label>
+                            <span class="x-red">*</span>餐桌名称
+                        </label>
+                        <input class="" type="text" name="tableName" id="tableName" placeholder="007" autocomplete="off">号桌
+                    </div>
+                    <hr>
+                    <input type="submit" class="layui-btn submit" value="完成提交"/>
+
+                </form>
+
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+
+</html>

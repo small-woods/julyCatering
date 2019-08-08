@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<script type="text/javascript" src="lib/layui/layui.all.js" charset="utf-8"></script>
+		<link rel="stylesheet" href="zui/css/zui.css">
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			.namehiddle{
+				visibility: hidden;
+				display: none;
+			}
+			div {
+				width: 100%;
+			}
+
+			ul {
+				list-style: none;
+				overflow: hidden;
+			}
+
+			#nav {
+				width: 100%;
+				height: 70px;
+				text-align: center;
+				line-height: 40px;
+				background: #029789;
+				padding: 0px;
+				margin: 0px;
+				font-family: "microsoft yahei";
+				color: whitesmoke;
+				font-size: 16px;
+				font-weight: 800;
+
+			}
+
+			#nav li {
+				width: 25%;
+				height: 70px;
+				line-height: 70px;
+				float: left;
+				border-bottom: none;
+
+			}
+
+			#nav li.active {
+				background: #7D6F6F;
+			}
+
+			#content {
+				width: 100%;
+				height: 800px;
+				position: relative;
+				border-top: none;
+			}
+
+			#content li {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				display: none;
+				padding: 0px;
+			}
+
+			.dishlist a {
+				width: 24.5%;
+				display: block;
+				float: left;
+				margin-left: 4px;
+			}
+
+			.dishlist a img {
+				width: 100%;
+				height: 200px;
+			}
+
+			.page {
+				margin-top: 20px;
+				text-align: center;
+
+			}
+
+			.page a {
+				display: inline-block;
+				background: #fff 0 0 no-repeat;
+				color: #888;
+				padding: 10px;
+				min-width: 15px;
+				border: 1px solid #E2E2E2;
+
+			}
+
+			.page span {
+				display: inline-block;
+				padding: 10px;
+				min-width: 15px;
+				border: 1px solid #E2E2E2;
+			}
+
+			.page span.current {
+				display: inline-block;
+				background: #029789 0 0 no-repeat;
+				color: #fff;
+				padding: 10px;
+				min-width: 15px;
+				border: 1px solid #029789;
+			}
+
+			.page .pagination li {
+				display: inline-block;
+				margin-right: 5px;
+				text-align: center;
+			}
+
+			.page .pagination li.active span {
+				background: #029789 0 0 no-repeat;
+				color: #fff;
+				border: 1px solid #029789;
+
+			}
+
+			.card-actions button{
+				float: right;
+			}
+			.clr {
+				clear: both;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="js/yttshowfood.js"></script>
+		<script type="text/javascript" src="js/addmycar.js"></script>
+	</head>
+	
+	<body>
+		<div>
+			<div class="bottomLine"></div>
+			<ul id="nav">
+				<li class="active" id="showtype1">招牌热菜</li>
+				<li id="showtype2">凉菜</li>
+				<li id="showtype3">酒水饮料</li>
+				<li id="showtype4">其他</li>
+			</ul>
+			<ul id="content" style="margin: 0px;padding: 0px;">
+				<li style="display: block">
+					<div class="dishlist" id="type1">
+						<!--<a class="card" href="###">-->
+							<!--<img src="images/1561352275477.jpg" alt="">-->
+							<!--<div class="card-heading"><strong>良辰美景</strong></div>-->
+							<!--<div class="card-content text-muted">良辰美景奈何天，赏心乐事谁家院。</div>-->
+							<!--<div class="card-actions">-->
+								<!--<span id="price" style="color: red;font-size: 16px;">-->
+									<!--RMB&nbsp;<span>12.00</span>/份-->
+								<!--</span>-->
+								<!--<button type="button" class="btn btn-danger"><p class="namehiddle">良辰美景 良辰美景奈何天，赏心乐事谁家院</p><i class="icon-plus"></i>来一份</button>-->
+							<!--</div>-->
+						<!--</a>-->
+					</div>
+					<div class="clr"></div>
+					<div class="page">
+						<div>
+							<a class="prev" href="#" title="首页" onclick="return firstPage(this);" >&lt;&lt;</a>
+							<a class="prev" href="#" title="上一页" onclick="return lastPage(this);">&lt;</a>
+							<label class="nowPage">1</label>
+							<a class="next" href="#" title="下一页" onclick="return nextPage(this);">&gt;</a>
+							<a class="prev" href="#" title="末页" onclick="return endPage(this);">&gt;&gt;</a>
+							<label class="maxPage">共<label class="maxPageValue">1</label>页</label>
+						</div>
+					</div>
+				</li>
+
+
+				<li>
+					<div class="dishlist" id="type2">
+					</div>
+					<div class="clr"></div>
+					<div class="page">
+						<div>
+							<a class="prev" href="#" title="首页" onclick="return firstPage2(this);">&lt;&lt;</a>
+							<a class="prev" href="#" title="上一页" onclick="return lastPage2(this);">&lt;</a>
+							<label class="nowPage2">1</label>
+							<a class="next" href="#" title="下一页" onclick="return nextPage2(this);">&gt;</a>
+							<a class="prev" href="#" title="末页" onclick="return endPage2(this);">&gt;&gt;</a>
+							<label class="maxPage2">共<label class="maxPageValue2">1</label>页</label>
+						</div>
+					</div>
+				</li>
+				<li><div class="dishlist" id="type3">
+					</div>
+					<div class="clr"></div>
+					<div class="page">
+						<div>
+							<a class="prev" href="#" title="首页" onclick="return firstPage3(this);">&lt;&lt;</a>
+							<a class="prev" href="#" title="上一页" onclick="return lastPage3(this);">&lt;</a>
+							<label class="nowPage3">1</label>
+							<a class="next" href="#" title="下一页" onclick="return nextPage3(this);">&gt;</a>
+							<a class="prev" href="#" title="末页" onclick="return endPage3(this);">&gt;&gt;</a>
+							<label class="maxPage3">共<label class="maxPageValue3">1</label>页</label>
+						</div>
+					</div>
+				</li>
+				<li><div class="dishlist" id="type4">
+					</div>
+					<div class="clr"></div>
+					<div class="page">
+						<div>
+							<a class="prev" href="#" title="首页" onclick="return lastPage4(this);">&lt;&lt;</a>
+							<a class="prev" href="#" title="上一页" onclick="return lastPage4(this);">&lt;</a>
+							<label class="nowPage4">1</label>
+							<a class="next" href="#" title="下一页" onclick="return nextPage4(this);">&gt;</a>
+							<a class="prev" href="#" title="末页" onclick="return endPage4(this);">&gt;&gt;</a>
+							<label class="maxPage4">共<label class="maxPageValue4">1</label>页</label>
+						</div>
+					</div></li>
+			</ul>
+		</div>
+
+
+
+		<script type="text/javascript">
+			var nav = document.getElementById("nav");
+			var navlist = nav.children;
+			var con = document.getElementById("content");
+			var conlist = con.children;
+			for (var i = 0; i < navlist.length; i++) {
+				navlist[i].index = i;
+				navlist[i].onclick = function() {
+					for (var m = 0; m < conlist.length; m++) {
+						navlist[m].className = "";
+						conlist[m].style.display = "none";
+					}
+					this.className = "active";
+					conlist[this.index].style.display = "block";
+				}
+			}
+		</script>
+		<script src="zui/lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="zui/js/zui.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+</html>

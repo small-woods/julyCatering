@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				padding: 0px;
+				margin: 0px;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			.top{
+				width: 100%;
+				height: 70px;
+
+				background: #029789;
+			}
+			img {
+				background: #029789;
+				width: 100%;
+				height: 100%;
+				float: right;
+				opacity: 0.9;
+			}
+			.r_Cnt{
+				margin: 0 auto;
+			}
+			.foucsBox {
+				/*width: 100%;
+	height: 100%;
+	list-style: none;*/
+				position: absolute;
+				top: 580px;
+				left: 55%;
+				margin-left: -60px;
+			}
+
+			.foucsBox li {
+				float: left;
+				margin-right: 20px;
+				width: 15px;
+				height: 15px;
+				cursor: pointer;
+			}
+
+			.foucsBox li.cur {
+				color: #97B9AF;
+				opacity: 0.6;
+				filter: alpha(opacity=60);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top"></div>
+		<div class="r_Cnt">
+			<img src="images/1.jpg" id="foucsImg">
+			<ul class="foucsBox">
+				<li onclick="showPic(1)"></li>
+				<li onclick="showPic(2)"></li>
+				<li onclick="showPic(3)"></li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var sign = 2;
+
+			function showPic(index) {
+				var foucsImg = document.getElementById("foucsImg");
+				var imgSrc = "images/";
+				imgSrc = imgSrc + index + ".jpg";
+				foucsImg.src = imgSrc;
+				var lis = document.getElementsByClassName("foucsBox")[0].getElementsByTagName("li");
+				for (var i = lis.length - 1; i >= 0; i--) {
+					lis[i].className = "";
+				}
+				lis[index - 1].className = "cur";
+
+			}
+
+			function setCurrentPic() {
+				showPic(sign);
+				sign++;
+				if (sign == 4) {
+					sign = 1;
+				}
+			}
+
+			window.onload = function() {
+				showPic(1);
+			}
+
+			window.setInterval("setCurrentPic()", 1500);
+		</script>
+	</body>
+</html>

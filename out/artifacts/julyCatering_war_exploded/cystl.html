@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="zui/css/zui.css">
+	<link rel="stylesheet" href="zui/lib/datatable/zui.datatable.css">
+</head>
+<style>
+	.table >  thead > tr > th.check-btn{
+		height: 50px;
+		line-height: 50px;
+		font-size: 20px;
+		background-color:#029789;
+		padding:0px;
+		color: white;
+	}
+	.datatable .table >  thead {
+		font-size: 16px;
+	}
+	.cnt{
+		width: 80%;
+		float: left;
+		margin-bottom: 0px;
+	}
+	.datatable td{
+		height: 51.4px!important;
+	}
+	.pay{
+		width: 100%;
+		margin: 0px;
+	}
+	.pay th{
+		padding: 0px;
+		height: 70px;
+		line-height: 70px;
+	}
+	thead .datatable-head-cell{
+		padding:0px;
+		height: 70px;
+		line-height: 70px;
+
+	}
+	.table > thead > tr > th{
+		background-color: #029789;
+		color: white;
+	}
+	th,td{
+		text-align: center;
+	}
+	tfoot{
+		height: 70px!important;
+		line-height: 70px!important;
+		background:#029789;
+		font-size: 16px;
+	}
+</style>
+<body>
+
+<div class="pay">
+	<table class="table table-borderless">
+		<thead>
+		<tr>
+			<th>支付方式</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td><a href="javascript:showPop()"><img src="images/zhifubao.png"></a></td>
+		</tr>
+		<tr>
+			<td><a href=""><img src="images/wechat.png"></a></td>
+		</tr>
+		<tr>
+			<td><a href=""><img src="images/card.png"></a></td>
+		</tr>
+		<tr>
+			<td><a href=""><img src="images/erweima.png"></a></td>
+		</tr>
+		<!--<tr>-->
+			<!--<td></td>-->
+		<!--</tr>-->
+		</tbody>
+	</table>
+
+</div>
+<script src="zui/lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="zui/js/zui.js" type="text/javascript" charset="utf-8"></script>
+<script src="zui/lib/datatable/zui.datatable.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$('table.datatable').datatable({
+
+	});
+	function showPop(){
+		// layer.m
+	}
+</script>
+</body>
+</html>

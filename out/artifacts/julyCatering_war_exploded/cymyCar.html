@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="zui/css/zui.css">
+	<link rel="stylesheet" type="text/css" href="zui/lib/datatable/zui.datatable.css" />
+	<link rel="stylesheet" href="awfonts/css/font-awesome.css">
+	<title></title>
+	<style type="text/css">
+		body {
+			font: normal 14px/24px 'MicroSoft YaHei';
+		}
+
+		.datatable .table>thead>tr>th.check-btn {
+			height: 70px;
+			line-height: 70px;
+			font-size: 20px;
+			background-color: #029789;
+			padding: 0px;
+			color: white;
+		}
+
+		.datatable .table>thead {
+			font-size: 16px;
+		}
+
+		thead .datatable-head-cell {
+			padding: 0px;
+			height: 70px;
+			line-height: 70px;
+
+		}
+
+		.table>thead>tr>th {
+			background-color: #029789;
+			color: white;
+		}
+
+		th {
+			height: 70px !important;
+			font-size: 16px;
+			line-height: 70px !important;
+			padding: 0px !important;
+		}
+
+		th,
+		td {
+			text-align: center;
+		}
+
+		tfoot {
+			background: #029789;
+			text-align: center;
+		}
+
+		tfoot button {
+			/* float: right; */
+		}
+
+		.fa-minus,
+		.fa-plus {
+			color: firebrick;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script src="lib/layui/layui.all.js"></script>
+	<script type="text/javascript" src="js/showtomycar.js"></script>
+	<script type="text/javascript" src="js/operationcar.js"></script>
+</head>
+<body>
+
+<table class="table datatable">
+	<thead>
+	<tr>
+		<th>菜品名</th>
+		<th>菜品单价</th>
+		<th>菜品数量</th>
+		<th>菜品总金额</th>
+		<th>操作</th>
+	</tr>
+	</thead>
+	<tbody id="mycar">
+	<!--<tr>-->
+		<!--<td>1</td>-->
+		<!--<td>11</td>-->
+		<!--<td>-->
+			<!--<div class="content">-->
+				<!--<button type="button" class="minus"><i class="fa fa-minus"></i></button>-->
+				<!--<input type="text" class="num" value="1" size="2" maxlength="2" style="width: 24px;">-->
+				<!--<button type="button" class="plus"><i class="fa fa-plus" class="plus"></i></button>-->
+			<!--</div>-->
+		<!--</td>-->
+		<!--<td class="totalprice">1111</td>-->
+		<!--<td><button class="btn btn-danger " type="button"><i class="icon icon-trash"></i>删除</button></td>-->
+	<!--</tr>-->
+
+	<tfoot>
+	<tr>
+		<td style="font-weight: 900;">总计</td>
+		<td></td>
+		<td></td>
+		<td id="payprice" style="color: red;font-weight: 900;"></td>
+		<!--<td><button class="btn" type="button" id="cfm"><a href="cystl.html">结&nbsp;&nbsp;&nbsp;&nbsp;算</a></button></td>-->
+		<td><button class="btn" type="button" id="cfm" onclick="return check(this)">结&nbsp;&nbsp;&nbsp;&nbsp;算</button></td>
+		</td>
+	</tr>
+	</tfoot>
+	</tbody>
+</table>
+</body>
+</html>

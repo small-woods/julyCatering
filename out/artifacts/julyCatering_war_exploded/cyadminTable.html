@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.left{
+				width: 80%;
+				height:auto;
+				float: left;
+			}
+			.tab{
+				background: #ffffff;
+				border: none;
+				outline: none;
+				width: 70px;
+				height: 70px;
+			}
+			.right{
+				width: 19.9%;
+				height: auto;
+				float: right;
+			}
+			.tablelist,.tblprst{
+				list-style: none;
+			}
+			.tablelist li{
+				display: block;
+				float: left;
+				width: 80px;
+				height: 80px;
+				margin: 10px;
+				border: #029789 1px solid ;
+				border-radius: 10px;
+				color: gray;
+			}
+			li span{
+				display: block;
+				text-align: center;
+				height: 80px;
+				line-height: 80px;
+			}
+			.tblprst li{
+				display: block;
+				width: 80px;
+				height: 80px;
+				border-radius: 10px;
+				margin-bottom: 25px;
+				color: gray;
+			}
+			.usenow {
+				background-color: #F39801;
+			}
+			
+			.vacantnow {
+				background-color: lightgray;
+			}
+			
+			.pending {
+				background-color: powderblue;
+			}
+			
+			.advanced {
+				background-color: #029789;
+			}
+		</style>
+
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="lib/layui/layui.all.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/addtableno.js"></script>
+	</head>
+	<body>
+		<div style="margin-bottom: 50px;"></div>
+		<div class="left">
+			<p>如需删除可点击餐桌图标</p>
+			<ul class="tablelist" id="tableno">
+			 <!--<li><span class="tblNo"><button class="tab todel">1</button></span></li>-->
+		    </ul>
+		</div>
+	</body>
+</html>

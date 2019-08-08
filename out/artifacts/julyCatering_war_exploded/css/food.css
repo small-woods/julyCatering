@@ -1,0 +1,52 @@
+*{margin:0;padding:0}
+li{list-style:none}
+.clear{clear:both}
+.menus{width:1000px;margin:-100px auto}
+.menus ul{width:1000px;border-bottom:2px solid #d4c9ec;position:relative;float:left}
+.menus li{float:left;width:200px;height:40px;line-height:40px;text-align:center;cursor:pointer;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;transition:all .5s}
+.menus li:nth-child(2){color:#fff}
+.menus .bg{width:150px;height:40px;position:absolute;left:0;top:0;background:#d4c9ec;z-index:-1;-webkit-transition:all .5s;-moz-transition:all .5s;-ms-transition:all .5s;-o-transition:all .5s;transition:all .5s}
+.tab{width:1000px;height:500px;
+    margin-top:20px;font-size:40px;line-height:500px;overflow-y: scroll;overflow-x: hidden;
+text-align:center;color: #d4c9ec;font-weight:700;display:none}
+.show{display:block;}
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+.foodimg {
+    border: 1px solid #ccc;
+}
+
+.foodimg:hover {
+    border: 1px solid #777;
+}
+
+.foodimg img {
+    width: 100%;
+    height: auto;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
